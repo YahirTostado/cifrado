@@ -1,0 +1,37 @@
+<div class="contenedor-cifrado">
+  <h2>Sistema de Cifrado</h2>
+  
+  <p><strong>Módulo activo:</strong> {{ metodo | uppercase }}</p>
+
+  <label>Conjunto de caracteres:</label>
+<textarea [(ngModel)]="conjuntoCaracteres"></textarea>
+  <textarea 
+  
+    [(ngModel)]="texto1" 
+    placeholder="Ingresa el texto a cifrar: ">
+  </textarea>
+
+  <div class="controles">
+    <label>Método:</label>
+    <select [(ngModel)]="metodo">
+      <option value="cesar">Cifrado César</option>
+      <option value="atbash">Cifrado Atbash</option>
+    </select>
+
+    <div *ngIf="metodo === 'cesar'" class="desplazamiento-input">
+      <label>Desplazamiento:</label>
+      <input type="number" [(ngModel)]="desplazamiento">
+    </div>
+  </div>
+
+  <div class="botones">
+    <button (click)="encriptar('cifrar')" class="btn-cifrar">Cifrar</button>
+    <button (click)="encriptar('descifrar')" class="btn-descifrar">Descifrar</button>
+    <button (click)="limpiar()" class="btn-limpiar">Limpiar</button>
+  </div>
+
+  <div class="resultado" *ngIf="texto2">
+    <h3>Resultado Final:</h3>
+    <div class="cuadro-texto">{{ texto2 }}</div>
+  </div>
+</div>
