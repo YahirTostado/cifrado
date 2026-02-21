@@ -9,4 +9,4 @@ Seleccionar el módulo de cifrado
 Definir el conjunto de caracteres (ASCII)
 Obtener el resultado cifrado o descifrado
 
-En nuestro archivo encriptacion.ts podremos encontrar la enumeracion de las secciones de codigo.
+En nuestro archivo encriptacion.ts encontramos la logica del cifrado.
