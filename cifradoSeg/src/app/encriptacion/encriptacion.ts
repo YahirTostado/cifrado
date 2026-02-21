@@ -10,7 +10,7 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './encriptacion.css',
 })
 export class Encriptacion {
-
+//Seccion 1.
   texto1: string = '';
   texto2: string = '';
 
@@ -20,7 +20,7 @@ export class Encriptacion {
   // caracteres ascii configurable
   conjuntoCaracteres: string =
     'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-
+//Seccion 2.
 encriptar(accion: 'cifrar' | 'descifrar', usarResultado: boolean = false) {
   const textoBase = usarResultado ? this.texto2 : this.texto1;
 
@@ -49,7 +49,7 @@ limpiar() {
     this.texto1 = '';
     this.texto2 = '';
   }
-
+//Seccion 3.
   // cifrado atbash basado en el conjunto de caracteres 
   private cifradoAtbash(texto: string): string {
     const caracteres = this.conjuntoCaracteres;
